@@ -1,15 +1,12 @@
 import StaffCard from "../components/StaffCard.tsx";
-import {Grid} from "@mantine/core";
+import {Grid, Stack} from "@mantine/core";
 import staff from "../data/about/staff.json";
+import Title2 from "../components/texts/Title2.tsx";
 
 export default function About() {
     return (
-        <div>
-            <h1>About Us</h1>
-            <p>We are a community-driven platform dedicated to connecting people and fostering collaboration.</p>
-            <p>Our mission is to create a space where individuals can share ideas, learn from each other, and build
-                meaningful relationships.</p>
-            <p>Join us in our journey to make the world a more connected place!</p>
+        <Stack align="center" gap="xl" >
+            <Title2 text="Staff" />
             <Grid>
                 {staff.map((member, idx) => (
                     <Grid.Col span={4} key={idx}>
@@ -21,6 +18,6 @@ export default function About() {
                     </Grid.Col>
                 ))}
             </Grid>
-        </div>
+        </Stack>
     );
 }

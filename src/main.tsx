@@ -1,4 +1,5 @@
 import {createRoot} from 'react-dom/client'
+import '@mantine/core/styles.css';
 import './index.css'
 import {createBrowserRouter, RouterProvider} from "react-router";
 import theme from "./theme/theme.tsx";
@@ -9,7 +10,6 @@ import Meetings from "./pages/meetings.tsx";
 import About from "./pages/about.tsx";
 import Errors from "./pages/Errors.tsx";
 import Layout from "./Layout.tsx";
-import '@mantine/core/styles.css';
 const router = createBrowserRouter([
     {
         path: "/",

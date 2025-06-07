@@ -6,7 +6,7 @@ import {IconBrandBluesky, IconBrandX} from "@tabler/icons-react";
 
 export default function About() {
     return (
-        <Stack align="stretch" gap="xl">
+        <Stack align={"center"}>
             <Title2 text="Staff" align="center"/>
             <SimpleGrid
                 cols={{base: 1, sm: 2, md: 3}}
@@ -21,9 +21,8 @@ export default function About() {
                     />
                 ))}
             </SimpleGrid>
-            <Title2 text={"Redes sociales"}/>
+            <Title2 text={"Redes sociales"} align="center"/>
             <SocialNetworks/>
-
         </Stack>
     );
 }

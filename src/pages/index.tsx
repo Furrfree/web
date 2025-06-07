@@ -32,16 +32,17 @@ export default function Index() {
                         </Stack>
                         <Image src={logo} alt="Logo" height="300px" fit="contain"/>
                     </Group>
-                    <Title order={2}>Nuestros valores</Title>
-                    <Text fz="md" ta="justify">
-                        Grupo destinado a organizar tanto quedadas, como art trades
-                        (intercambios de arte) en un entorno lo más desmonetizado posible.
-                        Así intentamos crear un espacio para aquellas personas que quieren
-                        formar parte de este fandom, pero por motivos económicos no se pueden
-                        permitir o no quieren destinar medio sueldo a participar en él.
-                    </Text>
+
                 </>
             )}
+            <Title order={2}>Nuestros valores</Title>
+            <Text fz="md" ta="justify">
+                Grupo destinado a organizar tanto quedadas, como art trades
+                (intercambios de arte) en un entorno lo más desmonetizado posible.
+                Así intentamos crear un espacio para aquellas personas que quieren
+                formar parte de este fandom, pero por motivos económicos no se pueden
+                permitir o no quieren destinar medio sueldo a participar en él.
+            </Text>
         </Stack>
     );
 }

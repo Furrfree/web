@@ -13,12 +13,18 @@ export default function Layout() {
         <AppShell
             header={{height: 60}}
             padding="md"
+            w={"100vw"}
         >
             <AppShell.Header>
                 <NavBar/>
             </AppShell.Header>
 
-            <AppShell.Main style={{paddingLeft: isMobile ? 50 : 150, paddingRight: isMobile ? 50 : 150}}>
+            <AppShell.Main
+                style={{
+                    paddingLeft: isMobile ? 50 : 150,
+                    paddingRight: isMobile ? 50 : 150,
+                }}
+            >
                 <Outlet/>
             </AppShell.Main>
         </AppShell>

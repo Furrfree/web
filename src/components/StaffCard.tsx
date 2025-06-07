@@ -1,4 +1,4 @@
-import {Card, Group, Stack, Text} from "@mantine/core";
+import {Avatar, Card, Group, Stack, Text} from "@mantine/core";
 import {blue, pink} from "../theme/colors.ts";
 
 interface StaffCardProps {
@@ -9,12 +9,12 @@ interface StaffCardProps {
 
 export default function StaffCard({name, position, imageUrl}: StaffCardProps) {
     return (
-        <Card radius={"lg"}>
+        <Card radius={"lg"} style={{width: '100%'}}>
             <Group>
-                <img
+                <Avatar
                     src={`${import.meta.env.BASE_URL}${imageUrl}`}
                     alt="Staff Member"
-                    style={{width: 80, height: 80, objectFit: "cover", borderRadius: "50%", marginRight: 16}}
+                    size="xl"
                 />
                 <Stack gap={1}>
                     <Text fz="xl" c={blue}>{name}</Text>

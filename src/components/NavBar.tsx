@@ -1,16 +1,11 @@
 import {Anchor, Group} from "@mantine/core";
 import logo from "../assets/logo.png";
 import {useLocation} from "react-router";
+import routes from "../utils/routes.ts";
 
 export default function NavBar() {
     const location = useLocation();
 
-    const links = [
-        {href: `${import.meta.env.BASE_URL}`, label: "Inicio"},
-        {href: `${import.meta.env.BASE_URL}groups/`, label: "Grupos"},
-        {href: `${import.meta.env.BASE_URL}meetings/`, label: "Quedadas"},
-        {href: `${import.meta.env.BASE_URL}about/`, label: "Acerca de"},
-    ];
 
     return (
         <Group
@@ -21,7 +16,7 @@ export default function NavBar() {
         >
             <img src={logo} alt="Logo" style={{height: "60px"}}/>
             <Group>
-                {links.map(link => (
+                {routes.map(link => (
                     <Anchor
                         key={link.href}
                         href={link.href}

@@ -12,7 +12,7 @@ export default function StaffCard({name, position, imageUrl}: StaffCardProps) {
         <Card radius={"lg"}>
             <Group>
                 <img
-                    src={imageUrl}
+                    src={`${import.meta.env.BASE_URL}${imageUrl}`}
                     alt="Staff Member"
                     style={{width: 80, height: 80, objectFit: "cover", borderRadius: "50%", marginRight: 16}}
                 />

@@ -1,6 +1,7 @@
 import {Group, Image, Space, Stack, Text, Title} from "@mantine/core";
 import {useMediaQuery} from "@mantine/hooks";
 import logo from "../assets/logo.png";
+import Title2 from "../components/texts/Title2";
 
 export default function Index() {
     const isMobile = useMediaQuery('(max-width: 48em)'); // Mantine's 'sm' breakpoint
@@ -35,7 +36,7 @@ export default function Index() {
 
                 </>
             )}
-            <Title order={2}>Nuestros valores</Title>
+            <Title2 text="Nuestros valores"/>
             <Text fz="md" ta="justify">
                 Grupo destinado a organizar tanto quedadas, como art trades
                 (intercambios de arte) en un entorno lo más desmonetizado posible.

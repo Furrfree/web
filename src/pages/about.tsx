@@ -6,10 +6,10 @@ import {IconBrandBluesky, IconBrandX} from "@tabler/icons-react";
 
 export default function About() {
     return (
-        <Stack align={"center"}>
+        <Stack align={"stretch"}>
             <Title2 text="Staff" align="center"/>
             <SimpleGrid
-                cols={{base: 1, sm: 2, md: 3}}
+                cols={{base: 1, xs: 1, sm: 1, md: 2, lg: 3}}
                 spacing={{base: 10, sm: 'xl'}}
                 verticalSpacing={{base: 'md', sm: 'xl'}}
             >
@@ -44,7 +44,7 @@ const socials = [
 
 function SocialNetworks() {
     return (
-        <Group align="center" gap="xl">
+        <Group justify="center" gap="xl">
             {socials.map((social, idx) => (
                 <ActionIcon
                     key={idx}

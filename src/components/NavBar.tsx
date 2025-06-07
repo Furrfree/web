@@ -1,10 +1,11 @@
-import {Anchor, Group} from "@mantine/core";
+import {Button, Group} from "@mantine/core";
 import logo from "../assets/logo.png";
-import {useLocation} from "react-router";
+import {useLocation, useNavigate} from "react-router";
 import routes from "../utils/routes.ts";
 
 export default function NavBar() {
     const location = useLocation();
+    const navigate = useNavigate();
 
 
     return (
@@ -17,16 +18,17 @@ export default function NavBar() {
             <img src={logo} alt="Logo" style={{height: "60px"}}/>
             <Group>
                 {routes.map(link => (
-                    <Anchor
+                    <Button
+                        variant="transparent"
                         key={link.href}
-                        href={link.href}
                         style={{
-                            color: "#000",
+                            color: "black",
                             textDecoration: location.pathname === link.href ? "underline" : "none",
                         }}
+                        onClick={() => navigate(link.href)}
                     >
                         {link.label}
-                    </Anchor>
+                    </Button>
                 ))}
             </Group>
         </Group>

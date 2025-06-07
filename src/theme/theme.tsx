@@ -1,5 +1,5 @@
-import {Button, createTheme, type MantineTheme, rem} from "@mantine/core";
-import classes from "../theme.module.css"
+import {ActionIcon, Button, createTheme, type MantineTheme, rem} from "@mantine/core";
+import classes from "./button.module.css"
 
 const theme = createTheme({
     primaryColor: "blue",
@@ -28,7 +28,14 @@ const theme = createTheme({
                     backgroundColor: theme.colors.surface[0], // or any color you want
                 },
             }),
-        }
+        },
+        ActionIcon:ActionIcon.extend({
+            styles:{
+                root: {
+                    border: `0px`,
+                },
+            }
+        })
     },
     /** Your theme override here */
 });

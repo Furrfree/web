@@ -20,7 +20,6 @@ const router = createBrowserRouter([
             {path: "groups", Component: Groups},
             {path: "meetings", Component: Meetings},
             {path: "about", Component: About},
-
         ]
     }
 ]);

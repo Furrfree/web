@@ -10,16 +10,19 @@ import Meetings from "./pages/meetings.tsx";
 import About from "./pages/about.tsx";
 import Errors from "./pages/Errors.tsx";
 import Layout from "./Layout.tsx";
+
+
+
 const router = createBrowserRouter([
     {
-        path: "/",
+        path: import.meta.env.BASE_URL,
         errorElement: <Errors/>, // Root-level error element
         element: <Layout/>,
         children: [
             {path: "", Component: Index},
-            {path: "groups", Component: Groups},
-            {path: "meetings", Component: Meetings},
-            {path: "about", Component: About},
+            {path: `${import.meta.env.BASE_URL}groups`, Component: Groups},
+            {path: `${import.meta.env.BASE_URL}meetings`, Component: Meetings},
+            {path: `${import.meta.env.BASE_URL}about`, Component: About},
         ]
     }
 ]);

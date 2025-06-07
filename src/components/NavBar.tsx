@@ -6,10 +6,10 @@ export default function NavBar() {
     const location = useLocation();
 
     const links = [
-        {href: "/", label: "Inicio"},
-        {href: "/groups", label: "Grupos"},
-        {href: "/meetings", label: "Quedadas"},
-        {href: "/about", label: "Acerca de"},
+        {href: `${import.meta.env.BASE_URL}`, label: "Inicio"},
+        {href: `${import.meta.env.BASE_URL}groups/`, label: "Grupos"},
+        {href: `${import.meta.env.BASE_URL}meetings/`, label: "Quedadas"},
+        {href: `${import.meta.env.BASE_URL}about/`, label: "Acerca de"},
     ];
 
     return (

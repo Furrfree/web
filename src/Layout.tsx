@@ -1,6 +1,7 @@
 import {AppShell, Burger } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import {Outlet} from "react-router";
+import NavBar from "./components/NavBar.tsx";
 
 
 export default function Layout() {
@@ -23,7 +24,7 @@ export default function Layout() {
                     hiddenFrom="sm"
                     size="sm"
                 />
-                Header
+                <NavBar />
             </AppShell.Header>
 
             <AppShell.Main>

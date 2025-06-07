@@ -1,20 +1,15 @@
-import {AppShell, Burger } from "@mantine/core";
-import { useDisclosure } from "@mantine/hooks";
+import {AppShell, Burger} from "@mantine/core";
+import {useDisclosure} from "@mantine/hooks";
 import {Outlet} from "react-router";
 import NavBar from "./components/NavBar.tsx";
 
 
 export default function Layout() {
-    const [opened, { toggle }] = useDisclosure();
+    const [opened, {toggle}] = useDisclosure();
 
     return (
         <AppShell
-            header={{ height: 60 }}
-            navbar={{
-                width: 300,
-                breakpoint: 'sm',
-                collapsed: { mobile: !opened },
-            }}
+            header={{height: 60}}
             padding="md"
         >
             <AppShell.Header>
@@ -24,11 +19,11 @@ export default function Layout() {
                     hiddenFrom="sm"
                     size="sm"
                 />
-                <NavBar />
+                <NavBar/>
             </AppShell.Header>
 
-            <AppShell.Main>
-                <Outlet />
+            <AppShell.Main style={{paddingLeft: 150, paddingRight: 150}}>
+                <Outlet/>
             </AppShell.Main>
         </AppShell>
     );

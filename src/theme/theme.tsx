@@ -1,5 +1,5 @@
 import {Button, createTheme, rem} from "@mantine/core";
-import classes from "./theme.module.css"
+import classes from "../theme.module.css"
 
 
 const theme = createTheme({

@@ -1,7 +1,7 @@
 import {createRoot} from 'react-dom/client'
 import './index.css'
 import {createBrowserRouter, RouterProvider} from "react-router";
-import theme from "./theme.tsx";
+import theme from "./theme/theme.tsx";
 import {MantineProvider} from "@mantine/core";
 import Index from "./pages";
 import Groups from "./pages/groups.tsx";

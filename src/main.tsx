@@ -8,11 +8,13 @@ import Groups from "./pages/groups.tsx";
 import Meetings from "./pages/meetings.tsx";
 import About from "./pages/about.tsx";
 import Errors from "./pages/Errors.tsx";
-
+import Layout from "./Layout.tsx";
+import '@mantine/core/styles.css';
 const router = createBrowserRouter([
     {
         path: "/",
         errorElement: <Errors/>, // Root-level error element
+        element: <Layout/>,
         children: [
             {path: "", Component: Index},
             {path: "groups", Component: Groups},

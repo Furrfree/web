@@ -1,5 +1,5 @@
 import {Avatar, Card, Group, Stack, Text} from "@mantine/core";
-import {blue, pink} from "../theme/colors.ts";
+import {blue, pink} from "../../theme/colors.ts";
 
 interface StaffCardProps {
     name: string;

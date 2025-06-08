@@ -1,5 +1,5 @@
 import {SimpleGrid, Stack, Text} from "@mantine/core";
-import GroupCard from "../components/GroupCard.tsx";
+import GroupCard from "../components/cards/GroupCard.tsx";
 import Title2 from "../components/texts/Title2.tsx";
 import groups from "../data/groups/groups.tsx";
 

@@ -1,4 +1,4 @@
-import StaffCard from "../components/StaffCard.tsx";
+import StaffCard from "../components/cards/StaffCard.tsx";
 import {ActionIcon, Group, SimpleGrid, Stack} from "@mantine/core";
 import staff from "../data/about/staff.json";
 import Title2 from "../components/texts/Title2.tsx";

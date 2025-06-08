@@ -1,7 +1,7 @@
 import {Card, Image, Stack, Text} from "@mantine/core";
 import type {Icon, IconProps} from "@tabler/icons-react";
 import type {ForwardRefExoticComponent, RefAttributes} from "react";
-import FurrfreeButton from "./input/furrfreebutton";
+import FurrfreeButton from "../input/furrfreebutton";
 
 interface GroupCardProps {
     name: string;

@@ -5,7 +5,6 @@ import AnimatedOutlet from "./main.tsx";
 
 export default function Layout() {
     const isMobile = useMediaQuery('(max-width: 48em)');
-    //const location = useLocation();
 
     return (
         <AppShell header={{height: 60}} padding="md" w={"100vw"}>

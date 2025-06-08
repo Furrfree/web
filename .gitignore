@@ -24,6 +24,6 @@ dist-ssr
 *.sw?
 
 # Html files for build
-about
-groups
-meetings
+/about/
+/groups/
+/meetings/

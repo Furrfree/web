@@ -5,13 +5,19 @@ import * as React from "react";
 
 
 interface MeetingCardProps {
+    id: number;
     title: string;
     description: string;
     date: string;
     location: string;
 }
 
-export default function MeetingCard({title, description, date, location}: MeetingCardProps) {
+export default function MeetingCard({id, title, description, date, location}: MeetingCardProps) {
+    console.log("meeting card", id);
+    const images = import.meta.glob('/src/data/meetings/1/*.{png,jpg,jpeg,svg}', {eager: true});
+
+    const imageList = Object.values(images).map((mod: any) => mod.default);
+
     return (
         <Card radius="xl">
             <Grid>
@@ -22,22 +28,17 @@ export default function MeetingCard({title, description, date, location}: Meetin
                         verticalSpacing={{base: 4}}
                         style={{height: "100%"}}
                     >
-                        <Image
-                            alt="Staff Member"
-                            src={`${import.meta.env.BASE_URL}vite.svg`}
-                        />
-                        <Image
-                            alt="Staff Member"
-                            src={`${import.meta.env.BASE_URL}vite.svg`}
-                        />
-                        <Image
-                            alt="Staff Member"
-                            src={`${import.meta.env.BASE_URL}vite.svg`}
-                        />
-                        <Image
-                            alt="Staff Member"
-                            src={`${import.meta.env.BASE_URL}vite.svg`}
-                        />
+                        {
+                            imageList.map((image, index) => (
+                                <Image
+                                    key={index}
+                                    alt="Staff Member"
+                                    src={image}
+                                    radius="md"
+                                    style={{width: "100%", height: "100%"}}
+                                />
+                            ))
+                        }
                     </SimpleGrid>
                 </Grid.Col>
                 <Grid.Col span={{xs: 12, sm: 8, md: 7, lg: 8}}>

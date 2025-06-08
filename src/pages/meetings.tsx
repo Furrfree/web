@@ -25,6 +25,7 @@ export default function Meetings() {
             >
                 {meetings.map((meeting, index) => (
                     <MeetingCard
+                        id={meeting.id}
                         key={index}
                         title={meeting.title}
                         description={meeting.description}

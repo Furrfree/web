@@ -22,7 +22,7 @@ export default function GroupCard({name, imageUrl, icon: Icon, link}: GroupCardP
                 />
                 <Icon size={32}/>
                 <Text fz="xl" c="blue">{name}</Text>
-                <FurrfreeButton link={link}/>
+                <FurrfreeButton link={link} text="Unirse" openInNewTab/>
             </Stack>
         </Card>
     )

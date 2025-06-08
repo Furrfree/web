@@ -2,6 +2,7 @@ import {AspectRatio, Card, Grid, Group, Image, SimpleGrid, Stack, Text} from "@m
 import {blue, pink} from "../../theme/colors.ts";
 import {IconCalendar, IconLocation} from "@tabler/icons-react";
 import * as React from "react";
+import FurrfreeButton from "../input/furrfreebutton";
 
 
 interface MeetingCardProps {
@@ -49,6 +50,7 @@ export default function MeetingCard({id, title, description, date, location}: Me
                         <Text size="md" c={pink}>{description}</Text>
                         <MeetingCardIconTextField icon={IconLocation} text={location}/>
                         <MeetingCardIconTextField icon={IconCalendar} text={date}/>
+                        <FurrfreeButton link={`${import.meta.env.BASE_URL}meetings/${id}`} text="Ver más"/>
                     </Stack>
                 </Grid.Col>
             </Grid>

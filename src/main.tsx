@@ -6,11 +6,12 @@ import theme from "./theme/theme.tsx";
 import {MantineProvider} from "@mantine/core";
 import Index from "./pages";
 import Groups from "./pages/groups.tsx";
-import Meetings from "./pages/meetings.tsx";
+import Meetings from "./pages/meetings";
 import About from "./pages/about.tsx";
 import Errors from "./pages/Errors.tsx";
 import Layout from "./Layout.tsx";
 import {AnimatePresence, motion} from "framer-motion";
+import Meeting from "./pages/meetings/meeting.tsx";
 
 
 /*const router = createBrowserRouter([
@@ -21,7 +22,7 @@ import {AnimatePresence, motion} from "framer-motion";
         children: [
             {path: "", Component: Index},
             {path: `${import.meta.env.BASE_URL}groups`, Component: Groups},
-            {path: `${import.meta.env.BASE_URL}meetings`, Component: Meetings},
+            {path: `${import.meta.env.BASE_URL}meetings`, Component: Index},
             {path: `${import.meta.env.BASE_URL}about`, Component: About},
         ]
     }
@@ -54,6 +55,7 @@ createRoot(document.getElementById('root')!).render(
                     <Route index element={<Index/>}/>
                     <Route path="groups" element={<Groups/>}/>
                     <Route path="meetings" element={<Meetings/>}/>
+                    <Route path="meetings/:id" element={<Meeting/>}/>
                     <Route path="about" element={<About/>}/>
                     <Route path="*" element={<Errors/>}/>
                 </Route>

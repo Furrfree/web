@@ -1,4 +1,4 @@
-import {Card, Grid, Group, Image, SimpleGrid, Stack, Text} from "@mantine/core";
+import {AspectRatio, Card, Grid, Group, Image, SimpleGrid, Stack, Text} from "@mantine/core";
 import {blue, pink} from "../../theme/colors.ts";
 import {IconCalendar, IconLocation} from "@tabler/icons-react";
 import * as React from "react";
@@ -14,10 +14,10 @@ interface MeetingCardProps {
 
 export default function MeetingCard({id, title, description, date, location}: MeetingCardProps) {
     console.log("meeting card", id);
-    const images = import.meta.glob('/src/data/meetings/1/*.{png,jpg,jpeg,svg}', {eager: true});
-
-    const imageList = Object.values(images).map((mod: any) => mod.default);
-
+    const images = import.meta.glob('/src/data/meetings/*/*.{png,jpg,jpeg,svg}', {eager: true});
+    const imageList = Object.entries(images)
+        .filter(([path]) => path.includes(`/meetings/${id}/`))
+        .map(([, mod]: any) => mod.default).slice(0, 4)
     return (
         <Card radius="xl">
             <Grid>
@@ -30,13 +30,15 @@ export default function MeetingCard({id, title, description, date, location}: Me
                     >
                         {
                             imageList.map((image, index) => (
-                                <Image
-                                    key={index}
-                                    alt="Staff Member"
-                                    src={image}
-                                    radius="md"
-                                    style={{width: "100%", height: "100%"}}
-                                />
+                                <AspectRatio ratio={1}>
+                                    <Image
+                                        key={index}
+                                        alt="Staff Member"
+                                        src={image}
+                                        radius="md"
+                                        style={{width: "100%", height: "100%"}}
+                                    />
+                                </AspectRatio>
                             ))
                         }
                     </SimpleGrid>

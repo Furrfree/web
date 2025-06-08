@@ -1,11 +1,11 @@
 import {SimpleGrid, Stack, Text} from "@mantine/core";
-import Title2 from "../components/texts/Title2.tsx";
-import Title3 from "../components/texts/Title3.tsx";
-import meetings from "../data/meetings/meetings.ts";
-import MeetingCard from "../components/cards/MeetingCard.tsx";
+import Title2 from "../../components/texts/Title2.tsx";
+import Title3 from "../../components/texts/Title3.tsx";
+import meetings from "../../data/meetings/meetings.ts";
+import MeetingCard from "../../components/cards/MeetingCard.tsx";
 
 
-export default function Meetings() {
+export default function Index() {
     return (
         <Stack>
             <Title2 text={"Quedadas"} align="center"/>

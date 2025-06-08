@@ -8,7 +8,7 @@
     "generate-html": "node generate-html.cjs",
     "build": "tsc -b && bun run generate-html && vite build",
     "lint": "eslint .",
-    "preview": "vite preview",
+    "preview": "bun run build && vite preview",
     "deploy": "bun run build && gh-pages -d dist"
   },
   "dependencies": {

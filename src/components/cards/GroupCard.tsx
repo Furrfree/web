@@ -15,10 +15,10 @@ export default function GroupCard({name, imageUrl, icon: Icon, link}: GroupCardP
         <Card radius={"xl"}>
             <Stack align="center" justify="center" p="xs">
                 <Image
-                    radius={"xl"}
+                    radius={"xl" }
                     src={imageUrl}
                     alt={name}
-                    style={{width: '100%', height: 'auto', borderRadius: '8px'}}
+                    style={{width: '100%', height: 'auto'}}
                 />
                 <Icon size={32}/>
                 <Text fz="xl" ta="center" c="blue">{name}</Text>

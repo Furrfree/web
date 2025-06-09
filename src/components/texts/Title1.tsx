@@ -1,10 +1,14 @@
 import {Title} from "@mantine/core";
 
 
-export default function Title1(){
+interface Title1Props{
+    text:string,
+}
+
+export default function Title1({text}:Title1Props){
     return (
-        <Title style={{fontWeight: 'bold', color: '#333'}}>
-            Furrfree
+        <Title style={{fontWeight: 'bold', color: '#333'}} c="white">
+            {text}
         </Title>
     );
 }

@@ -1,8 +1,11 @@
-export default function Errors(){
+import {Stack, Text} from "@mantine/core";
+import Title1 from "../components/texts/Title1.tsx";
+
+export default function Errors() {
     return (
-        <div>
-            <h1>404 - Page Not Found</h1>
-            <p>Sorry, the page you are looking for does not exist.</p>
-        </div>
+        <Stack align={"center"}>
+            <Title1 text={"404"}/>
+            <Text>Sorry, the page you are looking for does not exist.</Text>
+        </Stack>
     );
 }

@@ -1,7 +1,8 @@
-import {Group, Image, Space, Stack, Text, Title} from "@mantine/core";
+import {Group, Image, Space, Stack, Text} from "@mantine/core";
 import {useMediaQuery} from "@mantine/hooks";
 import logo from "../assets/logo.png";
 import Title2 from "../components/texts/Title2";
+import Title1 from "../components/texts/Title1";
 
 export default function Index() {
     const isMobile = useMediaQuery('(max-width: 48em)'); // Mantine's 'sm' breakpoint
@@ -12,7 +13,7 @@ export default function Index() {
             {isMobile ? (
                 <Stack align="center" gap="md">
                     <Image src={logo} alt="Logo" height="200px" fit="contain"/>
-                    <Title>Furrfree</Title>
+                    <Title1 text={"Furrfree"}/>
                     <Text ta="justify" fz="xl" lh="xl">
                         Somos un proyecto de comunidad para quien busque un lugar sano
                         donde conocer a otros furries, impulsando eventos y quedadas
@@ -24,7 +25,7 @@ export default function Index() {
                 <>
                     <Group align="center" grow gap="xl">
                         <Stack style={{height: '300px'}}>
-                            <Title>Furrfree</Title>
+                            <Title1 text={"Furrfree"}/>
                             <Text ta="justify" fz="xl" lh="xl">
                                 Somos un proyecto de comunidad para quien busque un lugar sano
                                 donde conocer a otros furries, impulsando eventos y quedadas

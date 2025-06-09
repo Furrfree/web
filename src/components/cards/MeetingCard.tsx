@@ -1,6 +1,6 @@
 import {AspectRatio, Card, Grid, Group, Image, SimpleGrid, Stack, Text} from "@mantine/core";
 import {blue, pink} from "../../theme/colors.ts";
-import {IconCalendar, IconLocation} from "@tabler/icons-react";
+import {IconCalendar, IconMapPin} from "@tabler/icons-react";
 import * as React from "react";
 import FurrfreeButton from "../input/furrfreebutton";
 
@@ -48,7 +48,7 @@ export default function MeetingCard({id, title, description, date, location}: Me
                     <Stack justify={"space-around"}>
                         <Text fz="xl" c={blue}>{title}</Text>
                         <Text size="md" c={pink}>{description}</Text>
-                        <MeetingCardIconTextField icon={IconLocation} text={location}/>
+                        <MeetingCardIconTextField icon={IconMapPin} text={location}/>
                         <MeetingCardIconTextField icon={IconCalendar} text={date}/>
                         <FurrfreeButton link={`${import.meta.env.BASE_URL}meetings/${id}`} text="Ver más"/>
                     </Stack>

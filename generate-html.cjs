@@ -14,14 +14,6 @@ const pages = [
 const outputDir = path.resolve(__dirname, './');
 
 
-// Get latest ID from meetings data
-const meetings = require("./src/data/meetings/meetings.ts").default;
-const latestMeeting = meetings.reduce((latest, meeting) => {
-    return !latest || meeting.id > latest.id ? meeting : latest;
-});
-console.log(latestMeeting);
-
-
 // Template for the HTML file
 const htmlTemplate = (title) => `
 <!doctype html>
@@ -53,16 +45,21 @@ pages.forEach(({name, title}) => {
 });
 
 
+// Get latest ID from meetings data
+const meetings = require("./src/data/meetings/meetings.ts").default;
+const latestMeeting = meetings.reduce((latest, meeting) => {
+    return !latest || meeting.id > latest.id ? meeting : latest;
+});
+
 // Generate the latest meetings HTML files
 for (let i = 0; i < latestMeeting.id; i++) {
-    const meetingId = latestMeeting.id + i;
-    const filePath = path.join(outputDir, `meetings/${meetingId}/index.html`);
+    const filePath = path.join(outputDir, `meetings/${i}/index.html`);
     const dirPath = path.dirname(filePath);
 
     // Ensure the directory exists
     fs.mkdirSync(dirPath, {recursive: true});
 
     // Write the HTML file
-    fs.writeFileSync(filePath, htmlTemplate(`Meeting ${meetingId}`), 'utf-8');
+    fs.writeFileSync(filePath, htmlTemplate(`Meeting ${i}`), 'utf-8');
     console.log(`Generated: ${filePath}`);
 }

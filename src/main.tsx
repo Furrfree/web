@@ -12,26 +12,9 @@ import Errors from "./pages/Errors.tsx";
 import Layout from "./Layout.tsx";
 import {AnimatePresence, motion} from "framer-motion";
 import Meeting from "./pages/meetings/meeting.tsx";
-import {withTranslation} from 'react-i18next';
 
 
 import "./i18n.ts"
-
-
-/*const router = createBrowserRouter([
-    {
-        path: import.meta.env.BASE_URL,
-        errorElement: <Errors/>, // Root-level error element
-        Component: Layout,
-        children: [
-            {path: "", Component: Index},
-            {path: `${import.meta.env.BASE_URL}groups`, Component: Groups},
-            {path: `${import.meta.env.BASE_URL}meetings`, Component: Index},
-            {path: `${import.meta.env.BASE_URL}about`, Component: About},
-        ]
-    }
-]);*/
-
 
 const AnimatedOutlet = () => {
     const outlet = useOutlet();

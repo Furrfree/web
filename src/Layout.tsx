@@ -45,8 +45,8 @@ export default function Layout() {
             </AppShell.Navbar>
             <AppShell.Main
                 style={{
-                    paddingLeft: isMobile ? 50 : 150,
-                    paddingRight: isMobile ? 50 : 150,
+                    paddingLeft: isMobile ? 50 : 200,
+                    paddingRight: isMobile ? 50 : 200,
                 }}
             >
                 <AnimatedOutlet/>

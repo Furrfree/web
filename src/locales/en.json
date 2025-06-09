@@ -3,25 +3,44 @@
     "home": {
       "description": "We are a community project for anyone looking for a healthy place to meet other furries, promoting free events and meetups in the fandom.",
       "title1": "Our values",
-      "text1": "Group aimed at organizing both meetups and art trades in an environment as non-monetized as possible. This way, we try to create a space for those who want to be part of this fandom but, for economic reasons, cannot afford or do not want to spend half their salary to participate."
+      "text1": "Group aimed at organizing both meetups and art trades in an environment as demonetized as possible. This way, we try to create a space for those who want to be part of this fandom but, for economic reasons, cannot afford or do not want to spend half their salary to participate."
     },
     "groups": {
       "title": "Groups",
       "description": "In Furrfree there are different groups you can join to be part of this community."
+    },
+    "meetings": {
+      "title": "Meetups",
+      "title2": "How do the meetups work?",
+      "description": "The meetups work like in other usual groups: a plan is proposed, approved, and organized. The difference is that here, priority will be given to those where it is not necessary to pay to participate. If something paid is organized, we will try to reduce these costs as much as possible. In the meetups group, these topics will be discussed and, once a meetup is approved, it will be published in the channel."
+    },
+    "about": {
+      "title": "Staff",
+      "socialNetworks": "Social Networks"
     }
   },
   "components": {
     "navbar": {
       "home": "Home",
       "groups": "Groups",
-      "meetings": "Meetings",
+      "meetings": "Meetups",
       "about": "About"
     },
-    "joinButton": "Join"
+    "joinButton": "Join",
+    "seeMoreButton": "See more"
   },
   "groups": {
     "furrfreeSpain": "Furrfree Spain",
     "furrfreeInternational": "Furrfree International",
     "furrfreeDiscord": "Furrfree"
+  },
+  "staff": {
+    "Etzharai": "Founder",
+    "Teko": "Programmer",
+    "Orenji": "Moderator",
+    "Staga": "Moderator",
+    "Rookie": "Moderator",
+    "Tori": "Moderator",
+    "Volpinho": "Designer"
   }
 }

@@ -3,18 +3,18 @@ import Title2 from "../../components/texts/Title2.tsx";
 import Title3 from "../../components/texts/Title3.tsx";
 import meetings from "../../data/meetings/meetings.ts";
 import MeetingCard from "../../components/cards/MeetingCard.tsx";
+import {useTranslation} from "react-i18next";
 
 
 export default function Index() {
+    const {t} = useTranslation("pages", {keyPrefix: "meetings"});
+
     return (
         <Stack>
-            <Title2 text={"Quedadas"} align="center"/>
-            <Title3 text={"¿Como funcionan las KDDs? "}/>
+            <Title2 text={t('title')} align="center"/>
+            <Title3 text={t('title2')}/>
             <Text ta={"justify"}>
-                Las quedadas funcionan como en el resto de grupos habituales, se propone un plan, se aprueba y se
-                organiza. La diferencia es que aquí se priorizará aquellos en los que no sea necesario pagar para
-                participar. En el caso de hacer algo de pago, se intentará reducir lo mínimo posible estos gastos. En el
-                grupo de KDDs se comentarán estos temas y una vez aprobada una quedada se publicará en el canal.
+                {t('description')}
             </Text>
 
             <SimpleGrid

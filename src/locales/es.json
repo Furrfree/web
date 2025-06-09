@@ -8,6 +8,15 @@
     "groups": {
       "title": "Grupos",
       "description": "En Furrfree hay diferentes grupos a los que puedes unirte para poder formar parte de esta comunidad."
+    },
+    "meetings": {
+      "title": "Quedadas",
+      "title2": "¿Como funcionan las KDDs?",
+      "description": "Las quedadas funcionan como en el resto de grupos habituales, se propone un plan, se aprueba y se organiza. La diferencia es que aquí se priorizará aquellos en los que no sea necesario pagar para participar. En el caso de hacer algo de pago, se intentará reducir lo mínimo posible estos gastos. En el grupo de KDDs se comentarán estos temas y una vez aprobada una quedada se publicará en el canal."
+    },
+    "about": {
+      "title": "Staff",
+      "socialNetworks": "Redes sociales"
     }
   },
   "components": {
@@ -17,11 +26,21 @@
       "meetings": "Quedadas",
       "about": "Acerca de"
     },
-    "joinButton": "Unirse"
+    "joinButton": "Unirse",
+    "seeMoreButton": "Ver más"
   },
   "groups": {
     "furrfreeSpain": "Furrfree España",
     "furrfreeInternational": "Furrfree Internacional",
     "furrfreeDiscord": "Furrfree"
+  },
+  "staff": {
+    "Etzharai": "Fundador/a",
+    "Teko": "Programador",
+    "Orenji": "Moderador",
+    "Staga": "Moderadora",
+    "Rookie": "Moderador",
+    "Tori": "Moderador",
+    "Volpinho": "Diseñador"
   }
 }

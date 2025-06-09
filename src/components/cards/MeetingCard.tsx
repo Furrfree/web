@@ -3,6 +3,7 @@ import {blue, pink} from "../../theme/colors.ts";
 import {IconCalendar, IconMapPin} from "@tabler/icons-react";
 import * as React from "react";
 import FurrfreeButton from "../input/furrfreebutton";
+import {useTranslation} from "react-i18next";
 
 
 interface MeetingCardProps {
@@ -14,7 +15,9 @@ interface MeetingCardProps {
 }
 
 export default function MeetingCard({id, title, description, date, location}: MeetingCardProps) {
-    console.log("meeting card", id);
+    const {t} = useTranslation("components");
+
+
     const images = import.meta.glob('/src/data/meetings/*/*.{png,jpg,jpeg,svg}', {eager: true});
     const imageList = Object.entries(images)
         .filter(([path]) => path.includes(`/meetings/${id}/`))
@@ -50,7 +53,7 @@ export default function MeetingCard({id, title, description, date, location}: Me
                         <Text size="md" c={pink}>{description}</Text>
                         <MeetingCardIconTextField icon={IconMapPin} text={location}/>
                         <MeetingCardIconTextField icon={IconCalendar} text={date}/>
-                        <FurrfreeButton link={`${import.meta.env.BASE_URL}meetings/${id}`} text="Ver más"/>
+                        <FurrfreeButton link={`${import.meta.env.BASE_URL}meetings/${id}`} text={t("seeMoreButton")}/>
                     </Stack>
                 </Grid.Col>
             </Grid>

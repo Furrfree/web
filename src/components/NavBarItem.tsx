@@ -5,15 +5,15 @@ interface NavBarItemProps {
     label: string;
     onClick: () => void;
     isActive:boolean;
-    color: "dark" | "white" ;
+    color: string ;
 }
 
 export default function NavBarItem({ label, onClick,isActive, color}: NavBarItemProps) {
     return (
         <Stack onClick={()=>onClick()} gap={"0px"} style={{cursor: "pointer"}} align={"center"}>
-            <Text c={color}>{label}</Text>
+            <Text style={{color:color}}>{label}</Text>
             {isActive && (
-                <Divider size={"xl"} style={{borderRadius: "20px", width:"120%"}} color={color}/>
+                <Divider size={"xl"} color={color} style={{borderRadius: "20px", width:"120%"}}/>
             )}
         </Stack>
     )

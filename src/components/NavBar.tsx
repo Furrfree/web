@@ -33,7 +33,8 @@ export default function NavBar({onBurgerClick, opened}: NavBarProps) {
                     {routes.map(link => (
                         <NavBarItem
                             label={link.label}
-                            color={"dark"} onClick={() => navigate(link.href)}
+                            color={"black"}
+                            onClick={() => navigate(link.href)}
                             isActive={location.pathname === link.href}
                         />
                     ))}

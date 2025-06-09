@@ -19,7 +19,7 @@ export default function NavBar({onBurgerClick, opened}: NavBarProps) {
 
     return (
         <Group
-            gap="xs"
+            gap="xl"
             style={{
                 background: "linear-gradient(90deg, #7AA5FC 0%, #E072F0 100%)",
             }}

@@ -2,7 +2,7 @@ import StaffCard from "../components/cards/StaffCard.tsx";
 import {ActionIcon, Group, SimpleGrid, Stack} from "@mantine/core";
 import staff from "../data/about/staff.json";
 import Title2 from "../components/texts/Title2.tsx";
-import {IconBrandBluesky, IconBrandX} from "@tabler/icons-react";
+import socialNetworks from "../data/about/socialNetworks.ts";
 
 export default function About() {
     return (
@@ -28,24 +28,11 @@ export default function About() {
 }
 
 
-const socials = [
-    {
-        name: "Bluesky",
-        url: "https://bsky.app/profile/furrfree.bsky.social",
-        icon: IconBrandBluesky,
-    },
-    {
-        name: "X",
-        url: "https://x.com/furrfree",
-        icon: IconBrandX
-    },
-]
-
 
 function SocialNetworks() {
     return (
         <Group justify="center" gap="xl">
-            {socials.map((social, idx) => (
+            {socialNetworks.map((social, idx) => (
                 <ActionIcon
                     key={idx}
                     component="a"

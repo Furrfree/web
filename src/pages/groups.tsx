@@ -14,8 +14,8 @@ export default function Groups() {
             </Text>
             <SimpleGrid
                 cols={{base: 1, xs: 2, sm: 2, md: 2, lg: 3}}
-                spacing={{base: 10}}
-                verticalSpacing={{base: 'md'}}
+                spacing={{base: "xl"}}
+                verticalSpacing={{base: 'xl'}}
                 style={{width: '70%'}}
             >
                 {groups.map((group, index) => (

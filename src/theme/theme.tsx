@@ -3,6 +3,7 @@ import classes from "./button.module.css"
 
 const theme = createTheme({
     primaryColor: "blue",
+    fontFamily: "Kadwa",
     colors: {
         "blue": ["#7AA5FC", "#6A8DE0", "#5A76C4", "#4B60A8", "#3C498C", "#2D3270", "#1E1B54", "#0F0438", "#00001C", "#000000"],
         "pink": ["#E072F0", "#D05CD9", "#B946C2", "#A130AB", "#8C1A94", "#7A147D", "#680E66", "#56084F", "#440233", "#32001C"],

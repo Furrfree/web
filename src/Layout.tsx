@@ -1,16 +1,20 @@
-import {AppShell, Stack} from "@mantine/core";
+import {ActionIcon, AppShell, Menu, Stack} from "@mantine/core";
 import NavBar from "./components/NavBar.tsx";
 import {useDisclosure, useMediaQuery} from "@mantine/hooks";
 import AnimatedOutlet from "./main.tsx";
 import routes from "./utils/routes.ts";
 import {useLocation, useNavigate} from "react-router";
 import NavBarItem from "./components/NavBarItem.tsx";
+import {IconCheck, IconWorld} from "@tabler/icons-react";
+import languages from "./locales/languages.ts";
+import {useTranslation} from "react-i18next";
 
 export default function Layout() {
     const isMobile = useMediaQuery('(max-width: 48em)');
     const [opened, {toggle}] = useDisclosure(false);
     const navigate = useNavigate()
     const location = useLocation()
+    const {t, i18n: {changeLanguage, language}} = useTranslation("components", {keyPrefix: "navbar"});
 
 
     return (
@@ -31,7 +35,7 @@ export default function Layout() {
                 <Stack p={50} align={"center"}>
                     {routes.map(link => (
                         <NavBarItem
-                            label={link.label}
+                            label={t(link.label)}
                             color={"white"}
                             onClick={() => {
                                 toggle()
@@ -40,6 +44,23 @@ export default function Layout() {
                             isActive={location.pathname === link.href}
                         />
                     ))}
+                    <Menu shadow="md" width={200}>
+                        <Menu.Target>
+                            <ActionIcon variant="transparent">
+                                <IconWorld/>
+                            </ActionIcon>
+                        </Menu.Target>
+                        <Menu.Dropdown>
+                            {languages.map((lang) => (
+                                <Menu.Item
+                                    leftSection={language === lang.id ? <IconCheck/> : null}
+                                    onClick={() => changeLanguage(lang.id)}
+                                >
+                                    {lang.name}
+                                </Menu.Item>
+                            ))}
+                        </Menu.Dropdown>
+                    </Menu>
                 </Stack>
 
             </AppShell.Navbar>

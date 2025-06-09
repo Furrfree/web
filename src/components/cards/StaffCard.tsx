@@ -12,7 +12,7 @@ export default function StaffCard({name, position, imageUrl}: StaffCardProps) {
         <Card radius={"lg"} style={{width: '100%'}}>
             <Group>
                 <Avatar
-                    src={`${import.meta.env.BASE_URL}${imageUrl}`}
+                    src={imageUrl}
                     alt="Staff Member"
                     size="xl"
                 />

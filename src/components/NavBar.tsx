@@ -1,9 +1,10 @@
-import {Group, Burger} from "@mantine/core";
+import {Group, Burger, Button} from "@mantine/core";
 import {useMediaQuery} from "@mantine/hooks";
 import logo from "../assets/logo.png";
 import routes from "../utils/routes.ts";
 import NavBarItem from "./NavBarItem.tsx";
 import {useLocation, useNavigate} from "react-router";
+import {useTranslation} from "react-i18next";
 
 
 interface NavBarProps {
@@ -16,6 +17,7 @@ export default function NavBar({onBurgerClick, opened}: NavBarProps) {
     const isMobile = useMediaQuery('(max-width: 768px)');
     const navigate = useNavigate()
     const location = useLocation()
+    const {t, i18n: {changeLanguage, language}} = useTranslation("components", {keyPrefix: "navbar"});
 
     return (
         <Group
@@ -32,7 +34,7 @@ export default function NavBar({onBurgerClick, opened}: NavBarProps) {
                 <Group>
                     {routes.map(link => (
                         <NavBarItem
-                            label={link.label}
+                            label={t(link.label)}
                             color={"black"}
                             onClick={() => navigate(link.href)}
                             isActive={location.pathname === link.href}
@@ -40,6 +42,14 @@ export default function NavBar({onBurgerClick, opened}: NavBarProps) {
                     ))}
                 </Group>
             )}
+
+            <Button
+                onClick={() => changeLanguage(language === "en" ? "es" : "en")}
+
+            >
+                Cambiar idioma
+            </Button>
+
         </Group>
     );
 }

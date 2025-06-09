@@ -3,9 +3,12 @@ import {useMediaQuery} from "@mantine/hooks";
 import logo from "../assets/logo.png";
 import Title2 from "../components/texts/Title2";
 import Title1 from "../components/texts/Title1";
+import {useTranslation} from "react-i18next";
+
 
 export default function Index() {
     const isMobile = useMediaQuery('(max-width: 48em)'); // Mantine's 'sm' breakpoint
+    const {t} = useTranslation("pages", {keyPrefix: "home"});
 
     return (
         <Stack>
@@ -18,6 +21,7 @@ export default function Index() {
                         Somos un proyecto de comunidad para quien busque un lugar sano
                         donde conocer a otros furries, impulsando eventos y quedadas
                         gratuitas en el fandom
+
                     </Text>
 
                 </Stack>
@@ -27,9 +31,7 @@ export default function Index() {
                         <Stack style={{height: '300px'}}>
                             <Title1 text={"Furrfree"}/>
                             <Text ta="justify" fz="xl" lh="xl">
-                                Somos un proyecto de comunidad para quien busque un lugar sano
-                                donde conocer a otros furries, impulsando eventos y quedadas
-                                gratuitas en el fandom
+                                {t("description")}
                             </Text>
                         </Stack>
                         <Image src={logo} alt="Logo" height="300px" fit="contain"/>
@@ -37,13 +39,9 @@ export default function Index() {
 
                 </>
             )}
-            <Title2 text="Nuestros valores"/>
+            <Title2 text={t("title1")}/>
             <Text fz="md" ta="justify">
-                Grupo destinado a organizar tanto quedadas, como art trades
-                (intercambios de arte) en un entorno lo más desmonetizado posible.
-                Así intentamos crear un espacio para aquellas personas que quieren
-                formar parte de este fandom, pero por motivos económicos no se pueden
-                permitir o no quieren destinar medio sueldo a participar en él.
+                {t("text1")}
             </Text>
         </Stack>
     );

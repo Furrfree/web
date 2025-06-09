@@ -2,15 +2,17 @@ import {SimpleGrid, Stack, Text} from "@mantine/core";
 import GroupCard from "../components/cards/GroupCard.tsx";
 import Title2 from "../components/texts/Title2.tsx";
 import groups from "../data/groups/groups.tsx";
+import {useTranslation} from "react-i18next";
 
 
 export default function Groups() {
+    const {t} = useTranslation(["pages", "groups"]);
+
     return (
         <Stack align={"center"}>
             <Title2 text="Grupos" align="center"/>
             <Text>
-                En furrfree hay diferentes grupos a los que puedes unirte para poder formar parte de esta
-                comunidad.
+                {t("groups.description", {ns: "pages"})}
             </Text>
             <SimpleGrid
                 cols={{base: 1, xs: 2, sm: 2, md: 2, lg: 3}}
@@ -21,7 +23,7 @@ export default function Groups() {
                 {groups.map((group, index) => (
                     <GroupCard
                         key={index}
-                        name={group.name}
+                        name={t(group.id, {ns: "groups"})}
                         icon={group.icon}
                         imageUrl={group.image}
                         link={group.link}

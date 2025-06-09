@@ -1,0 +1,27 @@
+{
+  "pages": {
+    "home": {
+      "description": "We are a community project for anyone looking for a healthy place to meet other furries, promoting free events and meetups in the fandom.",
+      "title1": "Our values",
+      "text1": "Group aimed at organizing both meetups and art trades in an environment as non-monetized as possible. This way, we try to create a space for those who want to be part of this fandom but, for economic reasons, cannot afford or do not want to spend half their salary to participate."
+    },
+    "groups": {
+      "title": "Groups",
+      "description": "In Furrfree there are different groups you can join to be part of this community."
+    }
+  },
+  "components": {
+    "navbar": {
+      "home": "Home",
+      "groups": "Groups",
+      "meetings": "Meetings",
+      "about": "About"
+    },
+    "joinButton": "Join"
+  },
+  "groups": {
+    "furrfreeSpain": "Furrfree Spain",
+    "furrfreeInternational": "Furrfree International",
+    "furrfreeDiscord": "Furrfree"
+  }
+}

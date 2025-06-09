@@ -12,6 +12,10 @@ import Errors from "./pages/Errors.tsx";
 import Layout from "./Layout.tsx";
 import {AnimatePresence, motion} from "framer-motion";
 import Meeting from "./pages/meetings/meeting.tsx";
+import {withTranslation} from 'react-i18next';
+
+
+import "./i18n.ts"
 
 
 /*const router = createBrowserRouter([
@@ -27,6 +31,8 @@ import Meeting from "./pages/meetings/meeting.tsx";
         ]
     }
 ]);*/
+
+
 const AnimatedOutlet = () => {
     const outlet = useOutlet();
     const location = useLocation();
@@ -52,7 +58,9 @@ createRoot(document.getElementById('root')!).render(
         <BrowserRouter>
             <Routes>
                 <Route path={import.meta.env.BASE_URL} element={<Layout/>}>
-                    <Route index element={<Index/>}/>
+                    <Route index element={
+                        <Index/>
+                    }/>
                     <Route path="groups" element={<Groups/>}/>
                     <Route path="meetings" element={<Meetings/>}/>
                     <Route path="meetings/:id" element={<Meeting/>}/>

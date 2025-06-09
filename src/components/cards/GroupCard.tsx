@@ -13,15 +13,15 @@ interface GroupCardProps {
 export default function GroupCard({name, imageUrl, icon: Icon, link}: GroupCardProps) {
     return (
         <Card radius={"xl"}>
-            <Stack align="center" justify="center" p="xl">
+            <Stack align="center" justify="center" p="xs">
                 <Image
-                    radius={"lg"}
+                    radius={"xl"}
                     src={imageUrl}
                     alt={name}
                     style={{width: '100%', height: 'auto', borderRadius: '8px'}}
                 />
                 <Icon size={32}/>
-                <Text fz="xl" c="blue">{name}</Text>
+                <Text fz="xl" ta="center" c="blue">{name}</Text>
                 <FurrfreeButton link={link} text="Unirse" openInNewTab/>
             </Stack>
         </Card>

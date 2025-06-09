@@ -6,23 +6,24 @@ import groups from "../data/groups/groups.tsx";
 
 export default function Groups() {
     return (
-        <Stack>
+        <Stack align={"center"}>
             <Title2 text="Grupos" align="center"/>
             <Text>
                 En furrfree hay diferentes grupos a los que puedes unirte para poder formar parte de esta
                 comunidad.
             </Text>
             <SimpleGrid
-                cols={{base: 1, xs: 1, sm: 1, md: 2, lg: 3}}
-                spacing={{base: 10, sm: 'xl'}}
-                verticalSpacing={{base: 'md', sm: 'xl'}}
+                cols={{base: 1, xs: 2, sm: 2, md: 2, lg: 3}}
+                spacing={{base: 10}}
+                verticalSpacing={{base: 'md'}}
+                style={{width: '70%'}}
             >
                 {groups.map((group, index) => (
                     <GroupCard
                         key={index}
                         name={group.name}
                         icon={group.icon}
-                        imageUrl={`${import.meta.env.BASE_URL}vite.svg`}
+                        imageUrl={group.image}
                         link={group.link}
                     />
                 ))}

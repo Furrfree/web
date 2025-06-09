@@ -1,14 +1,16 @@
-import {AppShell, Button, Stack} from "@mantine/core";
+import {AppShell, Stack} from "@mantine/core";
 import NavBar from "./components/NavBar.tsx";
 import {useDisclosure, useMediaQuery} from "@mantine/hooks";
 import AnimatedOutlet from "./main.tsx";
 import routes from "./utils/routes.ts";
-import {useNavigate} from "react-router";
+import {useLocation, useNavigate} from "react-router";
+import NavBarItem from "./components/NavBarItem.tsx";
 
 export default function Layout() {
     const isMobile = useMediaQuery('(max-width: 48em)');
-    const [opened, { toggle}] = useDisclosure(false);
+    const [opened, {toggle}] = useDisclosure(false);
     const navigate = useNavigate()
+    const location = useLocation()
 
 
     return (
@@ -17,29 +19,26 @@ export default function Layout() {
             navbar={{
                 width: 300,
                 breakpoint: 'sm',
-                collapsed: {mobile: !opened , desktop: true},
+                collapsed: {mobile: !opened, desktop: true},
             }}
             padding="md"
             w={"100vw"}
         >
             <AppShell.Header>
-                <NavBar onBurgerClick={toggle} opened={opened} />
+                <NavBar onBurgerClick={toggle} opened={opened}/>
             </AppShell.Header>
             <AppShell.Navbar>
-                <Stack>
+                <Stack p={50} align={"center"}>
                     {routes.map(link => (
-                        <Button
-                            variant="transparent"
-                            key={link.href}
-                            size="xl"
-                            style={{
-                                color: "white",
-                                textDecoration: location.pathname === link.href ? "underline" : "none",
+                        <NavBarItem
+                            label={link.label}
+                            color={"white"}
+                            onClick={() => {
+                                toggle()
+                                navigate(link.href)
                             }}
-                            onClick={() => navigate(link.href)}
-                        >
-                            {link.label}
-                        </Button>
+                            isActive={location.pathname === link.href}
+                        />
                     ))}
                 </Stack>
 

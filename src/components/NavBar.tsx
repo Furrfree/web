@@ -1,8 +1,9 @@
-import {Button, Group, Burger} from "@mantine/core";
+import {Group, Burger} from "@mantine/core";
 import {useMediaQuery} from "@mantine/hooks";
 import logo from "../assets/logo.png";
-import {useLocation, useNavigate} from "react-router";
 import routes from "../utils/routes.ts";
+import NavBarItem from "./NavBarItem.tsx";
+import {useLocation, useNavigate} from "react-router";
 
 
 interface NavBarProps {
@@ -11,9 +12,10 @@ interface NavBarProps {
 }
 
 export default function NavBar({onBurgerClick, opened}: NavBarProps) {
-    const location = useLocation();
-    const navigate = useNavigate();
+
     const isMobile = useMediaQuery('(max-width: 768px)');
+    const navigate = useNavigate()
+    const location = useLocation()
 
     return (
         <Group
@@ -29,17 +31,11 @@ export default function NavBar({onBurgerClick, opened}: NavBarProps) {
             ) : (
                 <Group>
                     {routes.map(link => (
-                        <Button
-                            variant="big"
-                            key={link.href}
-                            style={{
-                                color: "black",
-                                textDecoration: location.pathname === link.href ? "underline" : "none",
-                            }}
-                            onClick={() => navigate(link.href)}
-                        >
-                            {link.label}
-                        </Button>
+                        <NavBarItem
+                            label={link.label}
+                            color={"dark"} onClick={() => navigate(link.href)}
+                            isActive={location.pathname === link.href}
+                        />
                     ))}
                 </Group>
             )}

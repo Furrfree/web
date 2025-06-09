@@ -30,7 +30,7 @@ export default function NavBar({onBurgerClick, opened}: NavBarProps) {
                 <Group>
                     {routes.map(link => (
                         <Button
-                            variant="transparent"
+                            variant="big"
                             key={link.href}
                             style={{
                                 color: "black",

@@ -63,3 +63,8 @@ for (let i = 0; i < latestMeeting.id; i++) {
     fs.writeFileSync(filePath, htmlTemplate(`Meeting ${i}`), 'utf-8');
     console.log(`Generated: ${filePath}`);
 }
+
+// Add 404 page to meetigns to redirect to meetings/:id
+const notFoundPath = path.join(outputDir, 'meetings/404.html');
+fs.writeFileSync(notFoundPath, htmlTemplate('Meeting Not Found'), 'utf-8');
+console.log(`Generated: ${notFoundPath}`);

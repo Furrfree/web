@@ -53,7 +53,7 @@ const latestMeeting = meetings.reduce((latest, meeting) => {
 
 // Generate the latest meetings HTML files
 for (let i = 0; i < latestMeeting.id; i++) {
-    const filePath = path.join(outputDir, `meetings/${i}.html`);
+    const filePath = path.join(outputDir, `meetings/${i}/index.html`);
     const dirPath = path.dirname(filePath);
 
     // Ensure the directory exists

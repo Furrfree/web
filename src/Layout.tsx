@@ -1,13 +1,12 @@
-import {ActionIcon, AppShell, Menu, Stack} from "@mantine/core";
+import {AppShell, Stack} from "@mantine/core";
 import NavBar from "./components/NavBar.tsx";
 import {useDisclosure, useMediaQuery} from "@mantine/hooks";
 import AnimatedOutlet from "./main.tsx";
 import routes from "./utils/routes.ts";
 import {useLocation, useNavigate} from "react-router";
 import NavBarItem from "./components/NavBarItem.tsx";
-import {IconCheck, IconWorld} from "@tabler/icons-react";
-import languages from "./locales/languages.ts";
 import {useTranslation} from "react-i18next";
+import LanguageSelector from "./components/LanguageSelector.tsx";
 
 export default function Layout() {
     const isMobile = useMediaQuery('(max-width: 48em)');
@@ -44,23 +43,8 @@ export default function Layout() {
                             isActive={location.pathname === link.href}
                         />
                     ))}
-                    <Menu shadow="md" width={200}>
-                        <Menu.Target>
-                            <ActionIcon variant="transparent">
-                                <IconWorld/>
-                            </ActionIcon>
-                        </Menu.Target>
-                        <Menu.Dropdown>
-                            {languages.map((lang) => (
-                                <Menu.Item
-                                    leftSection={language === lang.id ? <IconCheck/> : null}
-                                    onClick={() => changeLanguage(lang.id)}
-                                >
-                                    {lang.name}
-                                </Menu.Item>
-                            ))}
-                        </Menu.Dropdown>
-                    </Menu>
+
+                    <LanguageSelector currentLanguage={language} changeLanguage={changeLanguage}/>
                 </Stack>
 
             </AppShell.Navbar>

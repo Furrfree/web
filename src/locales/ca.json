@@ -1,0 +1,46 @@
+{
+  "pages": {
+    "home": {
+      "description": "Som un projecte de comunitat per a qualsevol que busqui un lloc sa on conèixer a altres furries, fomentant esdeveniments i quedades gratuïtes en el fandom.",
+      "title1": "Els nostres valors",
+      "text1": "Som un grup destinat a organitzar tant quedades, com art trades (intercanvis d'art), en un entorn el qual estigui més desmonetitzat possible. D'aquesta manera intentem crear un espai per aquelles persones que volen formar part d'aquest fandom, però per motius econòmics, no es poden permetre o no volen destinar mig sou per a participar en ell."
+    },
+    "groups": {
+      "title": "Grups",
+      "description": "En Furfree hi ha diferents grups els quals et pots unir per a formar part d'aquesta comunitat."
+    },
+    "meetings": {
+      "title": "Quedades",
+      "title2": "Com funcionen les KDDs?",
+      "description": "Les quedades funcionen com la resta de grups habituals, es proposa un pla, s'aprova i s'organitza. La diferència és, aquí es prioritzen aquells on no sigui necessari pagar per a poder participar. En el cas de fer alguna cosa de pagament, s'intentarà reduir el cost al mínim possible. En el grup de KDDs es comentaran aquests temes i, un cop aprovada una quedada, es publicarà en el canal."
+    },
+    "about": {
+      "title": "Equip",
+      "socialNetworks": "Xarxes socials"
+    }
+  },
+  "components": {
+    "navbar": {
+      "home": "Inici",
+      "groups": "Grups",
+      "meetings": "Quedades",
+      "about": "Referent a"
+    },
+    "joinButton": "Unir-se",
+    "seeMoreButton": "Veure més"
+  },
+  "groups": {
+    "furrfreeSpain": "Furrfree Espanya",
+    "furrfreeInternational": "Furrfree Internacional",
+    "furrfreeDiscord": "Furrfree"
+  },
+  "staff": {
+    "Etzharai": "Fundador/a",
+    "Teko": "Programador",
+    "Orenji": "Moderador",
+    "Staga": "Moderadora",
+    "Rookie": "Moderador",
+    "Tori": "Moderador",
+    "Volpinho": "Dissenyador"
+  }
+}

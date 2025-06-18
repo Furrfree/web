@@ -10,7 +10,7 @@ export default function Groups() {
 
     return (
         <Stack align={"center"}>
-            <Title2 text="Grupos" align="center"/>
+            <Title2 text={t("groups.title")} align="center"/>
             <Text>
                 {t("groups.description", {ns: "pages"})}
             </Text>

@@ -16,7 +16,7 @@ const meetingInputs = Object.fromEntries(
 
 export default defineConfig({
     plugins: [react()],
-    base: "/furrfree-web/",
+    base: "/web/",
     build: {
         rollupOptions: {
             input: {

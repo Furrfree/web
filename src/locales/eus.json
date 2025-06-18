@@ -1,0 +1,46 @@
+{
+  "pages": {
+    "home": {
+      "description": "Beste furry (edo 'hiletsu') batzuk ezagutzeko leku osasuntsu bat bilatzen dutenentzako komunitate eta proiektu bat gara, doako ekitaldiak eta topaketak sustatuz fandom-ean text1",
+      "title1": "Gure balioak",
+      "text1": "Ahalik eta desmonetizatua dagoen ingurune batean topaketak, zein arte-lanbideak antolatzera dedikatzen den taldea gara. Fandom honen parte izan nahi duen jende berriarentzat espazio bat sortzen saiatzen, batez ere arrazoi ekonomikoengatik ezin dutenei lagunduz, edo soldata erdia bertan parte hartzeko gastatu nahi ez dutenentzako"
+    },
+    "groups": {
+      "title": "Taldeak",
+      "description": "FurrFree komunitatearen parte izateko talde desberdinetan sartu ahal zaitezke."
+    },
+    "meetings": {
+      "title": "Topaketak",
+      "title2": "Topaketak nola doazte?",
+      "description": "Topaketak beste talde arruntetan bezala funtzionatzen dute: plan bat proposatu, batzuen artean onartu eta geroztik antolatzen da. Ideia bat da parte hartzeko ordainketarik behar ez dutenek lehentasuna izango dutela. Ordainketa bat eskatzen bada, kostu horiek gutxitzen saiatuko gara. Gai hauek topaketen taldean eztabaidatuko dira, eta onartu ondoren, kanalean argitaratuko da."
+    },
+    "about": {
+      "title": "Gu",
+      "socialNetworks": "Sare sozialak"
+    }
+  },
+  "components": {
+    "navbar": {
+      "home": "Hasiera",
+      "groups": "Taldeak",
+      "meetings": "Topaketak",
+      "about": "Guri buruz"
+    },
+    "joinButton": "Batu",
+    "seeMoreButton": "Gehiago ikusi"
+  },
+  "groups": {
+    "furrfreeSpain": "Furrfree España",
+    "furrfreeInternational": "Furrfree Internacional",
+    "furrfreeDiscord": "Furrfree"
+  },
+  "staff": {
+    "Etzharai": "Sortzailea",
+    "Teko": "Programatzailea",
+    "Orenji": "Moderatzailea",
+    "Staga": "Moderatzailea",
+    "Rookie": "Moderatzailea",
+    "Tori": "Moderatzailea",
+    "Volpinho": "Diseinatzailea"
+  }
+}

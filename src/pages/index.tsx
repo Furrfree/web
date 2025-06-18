@@ -18,10 +18,7 @@ export default function Index() {
                     <Image src={logo} alt="Logo" height="200px" fit="contain"/>
                     <Title1 text={"Furrfree"}/>
                     <Text ta="justify" fz="xl" lh="xl">
-                        Somos un proyecto de comunidad para quien busque un lugar sano
-                        donde conocer a otros furries, impulsando eventos y quedadas
-                        gratuitas en el fandom
-
+                        {t("text1")}
                     </Text>
 
                 </Stack>

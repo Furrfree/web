@@ -20,7 +20,7 @@ export default defineConfig({
     build: {
         rollupOptions: {
             input: {
-                main: path.resolve(__dirname, 'index.html'),
+                home: path.resolve(__dirname, 'index.html'),
                 groups: path.resolve(__dirname, 'groups/index.html'),
                 meetings: path.resolve(__dirname, 'meetings/index.html'),
                 about: path.resolve(__dirname, 'about/index.html'),

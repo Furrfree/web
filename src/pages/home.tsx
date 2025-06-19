@@ -6,7 +6,7 @@ import Title1 from "../components/texts/Title1";
 import {useTranslation} from "react-i18next";
 
 
-export default function Index() {
+export default function Home() {
     const isMobile = useMediaQuery('(max-width: 48em)'); // Mantine's 'sm' breakpoint
     const {t} = useTranslation("pages", {keyPrefix: "home"});
 

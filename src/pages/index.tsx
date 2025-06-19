@@ -12,7 +12,6 @@ export default function Index() {
 
     return (
         <Stack>
-            <Space h="100px"/>
             {isMobile ? (
                 <Stack align="center" gap="md">
                     <Image src={logo} alt="Logo" height="200px" fit="contain"/>
@@ -24,6 +23,7 @@ export default function Index() {
                 </Stack>
             ) : (
                 <>
+                    <Space h="100px"/>
                     <Group align="center" grow gap="xl">
                         <Stack style={{height: '300px'}}>
                             <Title1 text={"Furrfree"}/>

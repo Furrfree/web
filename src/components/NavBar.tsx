@@ -14,7 +14,7 @@ interface NavBarProps {
 
 export default function NavBar({onBurgerClick, opened}: NavBarProps) {
 
-    const isMobile = useMediaQuery('(max-width: 768px)');
+    const isMobile = useMediaQuery('(max-width: 48em)');
     const navigate = useNavigate()
     const location = useLocation()
     const {t, i18n: {changeLanguage, language}} = useTranslation("components", {keyPrefix: "navbar"});

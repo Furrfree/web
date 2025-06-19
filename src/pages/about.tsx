@@ -4,6 +4,7 @@ import Title2 from "../components/texts/Title2.tsx";
 import socialNetworks from "../data/about/socialNetworks.ts";
 import staff from "../data/about/staff.ts";
 import {useTranslation} from "react-i18next";
+import {useMediaQuery} from "@mantine/hooks";
 
 export default function About() {
     const {t} = useTranslation(["pages", "staff"]);
@@ -32,6 +33,8 @@ export default function About() {
 
 
 function SocialNetworks() {
+    const isMobile = useMediaQuery('(max-width: 48em)');
+
     return (
         <Group justify="center" gap="xl">
             {socialNetworks.map((social, idx) => (
@@ -42,7 +45,7 @@ function SocialNetworks() {
                     target="_blank"
                     rel="noopener noreferrer"
                     variant="transparent"
-                    size={100}
+                    size={isMobile ? 50 :100}
                     color={"white"}
                 >
                     <social.icon size={100}/>

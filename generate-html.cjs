@@ -4,9 +4,9 @@ const path = require('path');
 
 // Define the pages and their titles
 const pages = [
-    {name: '/', title: 'Index'},
+    {name: '/', title: 'Home'},
     {name: '/groups', title: 'Groups'},
-    {name: '/meetings', title: 'Index'},
+    {name: '/meetings', title: 'Home'},
     {name: '/about', title: 'About'},
 ];
 

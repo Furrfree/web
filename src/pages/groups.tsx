@@ -18,7 +18,7 @@ export default function Groups() {
                 cols={{base: 1, xs: 2, sm: 2, md: 2, lg: 3}}
                 spacing={{base: "xl"}}
                 verticalSpacing={{base: 'xl'}}
-                style={{width: '70%'}}
+                style={{width: '80%'}}
             >
                 {groups.map((group, index) => (
                     <GroupCard
